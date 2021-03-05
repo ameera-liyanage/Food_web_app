@@ -1,0 +1,367 @@
+<div class="custom-header">
+  <div class="custom-header-wrapper">
+    <div class="header-title">164 Orders Found</div>
+    <div class="header-tab">
+      <div class="header-tab-wrapper">
+        <mat-tab-group>
+          <mat-tab label="All">
+              <div class="custom-panel">
+                <mat-accordion>
+                    <mat-expansion-panel
+                      (opened)="panelOpenState = true"
+                      (closed)="panelOpenState = false"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <div class="summary-wrapper">
+                            <div class="summary-row1">
+                              <div class="summary-row-first">
+                                <div class="summary-bac-image">
+                                  <img
+                                    src="../../../assets/icons/cell-phone.png"
+                                    class="summary-image"
+                                    alt="img"
+                                  />
+                                </div>
+                                <div class="summary-id">#42084</div>
+                              </div>
+                              <div class="summary-row-second">
+                                <div class="summary-item-name">Collection</div>
+                                <div class="summary-item-date">
+                                  20 Dec 2020 | 10:00 AM - 11:00 AM
+                                </div>
+                              </div>
+                              <div class="summary-row-three">
+                                <div class="summary-three-wrapper">
+                                  <img
+                                    src="../../../assets/icons/shop.png"
+                                    class="summary-icon"
+                                    alt="img"
+                                  />
+                                  <div class="summary-shop-name">
+                                    La pizza di don corleone
+                                  </div>
+                                </div>
+                                <div class="summary-three-wrapper-second">
+                                  <img
+                                    src="../../../assets/icons/pin.png"
+                                    class="summary-icon"
+                                    alt="img"
+                                  />
+                                  <div class="summary-shop-address">
+                                    9 Park Avenue,KILMARNOCK,KA10 3HZ
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="summary-row-four">
+                                <div class="summary-four-wrapper">
+                                  <img
+                                    src="../../../assets/icons/phone-call.png"
+                                    class="summary-icon"
+                                    alt="img"
+                                  />
+                                  <div class="summary-shop-number">+7894 337468</div>
+                                </div>
+                              </div>
+                              <div class="summary-row-five">
+                                <div class="summary-row-five-wrapper-one">
+                                  <div class="summary-status">Completed</div>
+                                </div>
+      
+                                <div class="summary-row-five-wrapper-second">
+                                  <div class="summary-price">$34.00</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <app-order-food></app-order-food>
+                      <app-order-food></app-order-food>
+                      <app-options></app-options>
+                      <app-add-ons></app-add-ons>
+                      <app-product-note></app-product-note>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+
+              </div>
+            
+          </mat-tab>
+          <mat-tab label="Ongoing Orders"> Content 2 </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <div class="header-filter">
+      <div class="header-select">
+        <div class="custom-header-select">
+          <div class="header-select-name">Sort by :</div>
+          <div class="header-select-item">
+            <mat-form-field appearance="fill">
+              <mat-label>Order ID</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-search">
+        <div class="input-wrapper">
+            <input type="text">
+            <div class="search-icon">
+              <img src="../../../assets/icons/search.png" alt="search-icon">
+            </div>
+          </div>
+      </div>
+      
+
+      <!-- <div class="header-search">
+        <input type="text" placeholder="Search.." name="search" />
+        <div class="search-icon-box">
+          <img
+            src="../../../assets/icons/search.png"
+            class="search-icon"
+            alt="img"
+          />
+        </div>
+      </div> -->
+    </div>
+    <!-- <div class="summary-wrapper">
+            <div class="summary-row1">
+                <div class="summary-row-first">
+                    <div class="summary-bac-image">
+                        <img src="../../../assets/icons/cell-phone.png" class="summary-image" alt="img">
+                    </div>
+                    <div class="summary-id">
+                        #42084
+                    </div>
+        
+                </div>
+                <div class="summary-row-second">
+                    <div class="summary-item-name">
+                        Collection
+                    </div>
+                    <div class="summary-item-date">
+                        20 Dec 2020 | 10:00 AM - 11:00 AM
+                    </div>
+        
+                </div>
+                <div class="summary-row-three">
+                    <div class="summary-three-wrapper">
+                        <img src="../../../assets/icons/shop.png" class="summary-icon" alt="img">
+                        <div class="summary-shop-name">
+                            La pizza di don corleone
+                        </div>
+                    </div>
+                    <div class="summary-three-wrapper-second">
+                        <img src="../../../assets/icons/pin.png" class="summary-icon" alt="img">
+                        <div class="summary-shop-address">
+                            9 Park Avenue,KILMARNOCK,KA10 3HZ
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="summary-row-four">
+                    <div class="summary-four-wrapper">
+                        <img src="../../../assets/icons/phone-call.png" class="summary-icon" alt="img">
+                        <div class="summary-shop-number">
+                            +7894 337468
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="summary-row-five">
+                    <div class="summary-row-five-wrapper-one">
+                        <div class="summary-status">
+                            Completed
+                        </div>
+                    </div>
+                    
+                    <div class="summary-row-five-wrapper-second">
+                        <div class="summary-price">
+                            $34.00
+                        </div>
+                    </div>
+        
+                </div>
+        
+        
+            </div>
+        
+        </div> -->
+
+    <!-- <div class="summary-order">
+            <div class="summary-order-row1">
+                <div class="summary-order-row-first">
+                    <div class="summary-order-bac-image">
+                        <img src="../../../assets/images/image1.jpg" class="order-image" alt="img">
+                    </div>
+                    <div class="quantity">
+                        1 X
+                    </div>
+                </div>
+                <div class="summary-order-row-second">
+                    <div class="order-name">
+                        Beef Pepperoni Pizza
+                    </div>
+                </div>
+                <div class="summary-order-row-third">
+                    <div class="order-price">
+                        $15.00
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- <div class="summary-cate">
+            <div class="summary-title-name">
+                Options
+            </div>
+        </div>
+        <div class="order-option">
+            <div class="order-option-wrapper">
+                <div class="order-option-name">
+                    Beef Pepperoni Pizza
+                </div>
+            </div>
+            <div class="summary-order-row-third">
+                <div class="order-price">
+                    $15.00
+                </div>
+            </div>
+        </div> -->
+
+    <!--         
+        <div class="summary-cate">
+            <div class="summary-title-name">
+                My Product Note
+            </div>
+        </div>
+        <div class="order-product-note">
+            <div class="order-product-note-wrapper">
+                <div class="order-product-note-header">
+                    <div class="order-product-note-name">
+                        John lee
+                    </div>
+                    <div class="order-product-note-date">
+                        2:45 PM | 23 Jan 20
+                    </div>
+
+                </div>
+                <div class="order-product-note-content">
+                    <div class="order-product-note-profile-img">
+                        <img src="../../../assets/icons/profile.png" class="profile-img" alt="img">
+                    </div>
+                    <div class="order-product-note-desc">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system
+                    </div>
+                </div>
+
+                <div class="product-note-image-wrapper">
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="order-product-note-wrapper">
+                <div class="order-product-note-header">
+                    <div class="order-product-note-name">
+                        John lee
+                    </div>
+                    <div class="order-product-note-date">
+                        2:45 PM | 23 Jan 20
+                    </div>
+
+                </div>
+                <div class="order-product-note-content">
+                    <div class="order-product-note-profile-img">
+                        <img src="../../../assets/icons/profile.png" class="profile-img" alt="img">
+                    </div>
+                    <div class="order-product-note-desc">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system
+                    </div>
+                </div>
+
+                <div class="product-note-image-wrapper">
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="order-product-note-wrapper">
+                <div class="order-product-note-header">
+                    <div class="order-product-note-name">
+                        John lee
+                    </div>
+                    <div class="order-product-note-date">
+                        2:45 PM | 23 Jan 20
+                    </div>
+
+                </div>
+                <div class="order-product-note-content">
+                    <div class="order-product-note-profile-img">
+                        <img src="../../../assets/icons/profile.png" class="profile-img" alt="img">
+                    </div>
+                    <div class="order-product-note-desc">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system
+                    </div>
+                </div>
+
+                <div class="product-note-image-wrapper">
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    <div class="product-note-images">
+                        <img src="../../../assets/images/product1.jpg" class="product-imgs" alt="img">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            
+
+        </div> -->
+
+    <div>
+            <section>
+                <button mat-flat-button color="accent">Details</button>
+
+            </section>
+            
+        </div>
+  </div>
+</div>
