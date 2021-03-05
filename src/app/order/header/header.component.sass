@@ -1,4 +1,5 @@
 
+
 .custom-header-wrapper 
     display: flex
     flex-wrap: wrap
@@ -158,7 +159,8 @@
     width: 0 !important
 
 ::ng-deep .mat-expansion-panel-header 
-    height: 75px !important
+    height: 95px !important
+    border-left: 5px solid #05ae41 !important
 
 
 ::ng-deep .mat-typography p 
@@ -205,3 +207,117 @@
 
 .custom-panel 
     padding: 0 45px
+
+
+::ng-deep .mat-expansion-panel-body 
+    border-left: 5px solid #05ae41 !important
+    padding: 2px !important
+
+::ng-deep .mat-flat-button
+    min-width: 145px !important
+
+.detail-btn 
+    float: right
+    padding: 20px 12px
+
+
+@media only screen and (max-width: 992px)
+    .header-title
+        flex: 0 0 100% !important
+
+    .header-tab
+        flex: 0 0 100% !important
+    
+    .header-filter
+        flex: 0 0 100% !important
+        flex-direction: column
+
+    .header-select
+        flex: 0 0 100% !important
+
+    .header-search
+        flex: 0 0 100% !important
+
+    .custom-panel
+        padding: 115px 30px
+
+    ::ng-deep .mat-expansion-panel-header 
+        height: 1% !important
+        padding: 0 15px !important
+
+
+@media only screen and (max-width: 768px)
+    .header-title
+        flex: 0 0 100% !important
+        padding: 0 !important
+
+    .header-tab
+        flex: 0 0 100% !important
+
+    .header-filter
+        flex: 0 0 100% !important
+        flex-direction: column
+
+    .header-select
+        flex: 0 0 100% !important
+
+    .header-search
+        flex: 0 0 100% !important
+
+    .custom-panel
+        padding: 115px 30px
+
+    ::ng-deep .mat-expansion-panel-header 
+        height: 1% !important
+        padding: 0 15px !important
+
+    .summary-row1
+        flex-direction: column !important
+
+    .summary-row-three
+        padding: 8px 0 !important
+
+    .summary-row-four
+        padding: 8px 0 !important
+
+    .summary-row-five
+        padding: 8px 0 !important
+
+
+@media only screen and (max-width: 575px) 
+    .header-title
+        flex: 0 0 100% !important
+
+    .header-tab
+        flex: 0 0 100% !important
+    
+    .header-filter
+        flex: 0 0 100% !important
+        flex-direction: column
+
+    .header-select
+        flex: 0 0 100% !important
+
+    .header-search
+        flex: 0 0 100% !important
+
+    .custom-panel
+        padding: 115px 30px
+
+    ::ng-deep .mat-expansion-panel-header 
+        height: 1% !important
+        padding: 0 15px !important
+
+    .summary-row1
+        flex-direction: column !important
+
+    .summary-row-three
+        padding: 8px 0 !important
+
+    .summary-row-four
+        padding: 8px 0 !important
+
+    .summary-row-five
+        padding: 8px 0 !important
+
+

@@ -2,7 +2,6 @@
     width: 100%
     background-color: #efefef
     padding: 15px 5px
-    border-left: 5px solid #05ae41
 
 .summary-title-name
     font-size: 18px
@@ -56,4 +55,31 @@
 
 .order-product-note
     display: flex
-    border-left: 5px solid #05ae41
+
+
+@media only screen and (max-width: 992px)
+
+
+@media only screen and (max-width: 768px)
+    .summary-cate 
+        padding: 10px 5px
+
+    // .order-product-note-wrapper
+    //     flex: 0 0 100% !important
+
+    .order-product-note 
+        flex-wrap: wrap !important
+
+
+@media only screen and (max-width: 575px) 
+    .summary-cate 
+        padding: 10px 5px
+
+    .order-product-note-wrapper
+        flex: 0 0 100% !important
+
+    .order-product-note 
+        flex-wrap: wrap !important
+
+    .order-product-note-desc
+        padding: 0 12px
